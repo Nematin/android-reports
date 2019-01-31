@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">KSIT Production</string>
     <!-- Strings related to login -->
-    <string name="prompt_email">Логин</string>
-    <string name="prompt_password">Пароль</string>
-    <string name="action_sign_in">Вход</string>
+    <string name="email">Email</string>
+    <string name="hint_enterEmail">Введите логин</string>
+    <string name="password">Пароль</string>
+    <string name="hint_enterPassword">Введите пароль</string>
+    <string name="action_sign_in">Войти</string>
     <string name="action_sign_in_short">Вход</string>
     <string name="error_invalid_email">Некорректный логин</string>
     <string name="error_invalid_password">У вас короткий пароль</string>
