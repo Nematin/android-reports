@@ -1,4 +1,4 @@
-package com.example.ksitproduction;
+package com.example.ksitproduction.view;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -20,18 +20,17 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
-import android.text.Editable;
 import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.content.Intent;
+
+import com.example.ksitproduction.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -92,12 +91,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         });
 
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
-        mEmailSignInButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                attemptLogin();
-            }
-        });
+//        mEmailSignInButton.setOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                attemptLogin();
+//                Intent intent = new Intent(this, MainActivity.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
 
         mLoginFormView = findViewById(R.id.login_form);
 //        mProgressView = findViewById(R.id.login_progress);
@@ -138,6 +140,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
 
         });
+    }
+    public void onLoginClick(View view)
+    {
+        attemptLogin();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     private void populateAutoComplete() {
@@ -194,7 +203,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             return;
         }
 
-        // Reset errors.
+        // Reset errors.0
         mEmailView.setError(null);
         mPasswordView.setError(null);
 
