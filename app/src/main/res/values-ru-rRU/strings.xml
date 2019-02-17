@@ -16,4 +16,7 @@
     <string name="error_field_required">Заполните поле</string>
     <string name="permission_rationale">Мы не смогли перевести это уведомление</string>
     <string name="labName">Название лабораторной</string>
+    <string name="manualTextView">Ручной ввод</string>
+    <string name="login_label">Вход</string>
+    <string name="qrTextView">QR код</string>
 </resources>

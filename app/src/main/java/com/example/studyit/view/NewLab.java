@@ -1,9 +1,11 @@
 package com.example.studyit.view;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.studyit.R;
 
@@ -31,6 +33,15 @@ public class NewLab extends AppCompatActivity {
 
     }
 
+    public void saveLab(View view)
+    {
+        //Скорее всего здесь будет код для сохранения лабораторной
+
+        Toast toast = Toast.makeText(getApplicationContext(),
+                "ДОБААААВЬ меня", Toast.LENGTH_SHORT);
+        toast.show();
+
+    }
 
 
 }
